@@ -32,9 +32,9 @@ const MenuOverlay: React.FC<MenuOverlayProps> = ({ isOpen, onClose }) => {
   ];
 
   return (
-    <div className="fixed inset-0 z-[300] bg-white flex flex-col transition-all duration-700 animate-slide-in">
+    <div className="fixed inset-0 z-[300] bg-white flex flex-col transition-all duration-700 animate-slide-in h-[100dvh]">
       {/* Header inside Menu */}
-      <div className="flex justify-between items-center p-8 md:p-12">
+      <div className="flex-none flex justify-between items-center p-8 md:p-12">
         <button onClick={(e) => navigateTo(e, '#')} className="font-brand text-5xl text-orange-500 hover:scale-105 transition-transform">
           3dots
         </button>
@@ -46,8 +46,8 @@ const MenuOverlay: React.FC<MenuOverlayProps> = ({ isOpen, onClose }) => {
         </button>
       </div>
 
-      {/* Main Navigation */}
-      <nav className="flex flex-col px-8 md:px-24 justify-center flex-grow space-y-4 md:space-y-6">
+      {/* Main Navigation - scrollable */}
+      <nav className="flex-grow min-h-0 overflow-y-auto px-8 md:px-24 flex flex-col justify-center space-y-4 md:space-y-6">
         {links.map((link) => (
           <a
             key={link.label}
@@ -74,7 +74,7 @@ const MenuOverlay: React.FC<MenuOverlayProps> = ({ isOpen, onClose }) => {
       </nav>
 
       {/* Footer inside Menu */}
-      <div className="p-8 md:p-12 grid grid-cols-1 md:grid-cols-3 gap-8 bg-gray-50 border-t border-gray-100">
+      <div className="flex-none p-8 md:p-12 grid grid-cols-1 md:grid-cols-3 gap-8 bg-gray-50 border-t border-gray-100">
         <div className="group cursor-default">
           <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-3 font-sans-ui">Location</p>
           <p className="text-lg font-bold group-hover:text-orange-500 transition-colors">{CONTACT_INFO.address}</p>

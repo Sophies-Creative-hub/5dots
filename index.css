@@ -30,7 +30,7 @@
   /* Custom Colors */
   --color-coral: #FB923C;
   --color-wine: #7F1D1D;
-  --color-paper: #fdfcf7;
+  --color-paper: #FFF5ED;
   
   /* Font Families */
   --font-family-brand: 'Dancing Script', cursive;
@@ -95,8 +95,8 @@ input, textarea {
     color-scheme: dark;
 }
 
-/* Selection highlight */
+/* Selection highlight - Wine mit Paper */
 ::selection {
-    background: #fb923c;
-    color: white;
+    background: #7F1D1D;
+    color: #FFF5ED;
 }
